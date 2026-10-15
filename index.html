@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +16,7 @@
         <span class="mobile-step" data-mobile-step="3">3</span>
         <span class="mobile-step" data-mobile-step="4">4</span>
       </div>
+
       <nav class="step-nav">
         <div class="step-item active" data-step-indicator="1">
           <span class="step-number">1</span>
@@ -37,111 +39,198 @@
 
     <section class="form-area">
       <form id="multistep-form" novalidate>
+
+        <!-- Step 1: Personal Information -->
         <section class="form-step active" data-step="1">
           <header class="step-header">
             <h1>Personal Info</h1>
             <p>Please provide your name, email address, and phone number.</p>
           </header>
+
           <div class="field-group">
-            <div class="label-line"><label for="userName">Name</label><span class="error-text" id="name-error">This field is required</span></div>
-            <input id="userName" name="userName" type="text" placeholder="e.g. Stephen King" autocomplete="name" />
+            <div class="label-line">
+              <label for="userName">Name</label>
+              <span class="error-text" id="name-error">This field is required</span>
+            </div>
+            <input id="userName" name="userName" type="text"
+              placeholder="e.g. Stephen King" autocomplete="name" />
           </div>
+
           <div class="field-group">
-            <div class="label-line"><label for="email">Email Address</label><span class="error-text" id="email-error">Enter a valid email</span></div>
-            <input id="email" name="email" type="email" placeholder="e.g. stephenking@lorem.com" autocomplete="email" />
+            <div class="label-line">
+              <label for="email">Email Address</label>
+              <span class="error-text" id="email-error">Enter a valid email</span>
+            </div>
+            <input id="email" name="email" type="email"
+              placeholder="e.g. stephenking@lorem.com" autocomplete="email" />
           </div>
+
           <div class="field-group">
-            <div class="label-line"><label for="phone">Phone Number</label><span class="error-text" id="phone-error">This field is required</span></div>
-            <input id="phone" name="phone" type="tel" placeholder="e.g. 7894561230" autocomplete="tel" />
+            <div class="label-line">
+              <label for="phone">Phone Number</label>
+              <span class="error-text" id="phone-error">This field is required</span>
+            </div>
+            <input id="phone" name="phone" type="tel"
+              placeholder="e.g. 7894561230" autocomplete="tel" />
           </div>
         </section>
 
+        <!-- Step 2: Select Plan -->
         <section class="form-step" data-step="2">
           <header class="step-header">
             <h1>Select Your Plan</h1>
             <p>You have the option of monthly or yearly billing</p>
           </header>
+
           <div class="plan-grid" role="radiogroup" aria-label="Select a plan">
-            <button type="button" class="plan-card" data-plan="Arcade" aria-pressed="false">
+            <button type="button" class="plan-card plan_card"
+              data-plan="Arcade" aria-pressed="false">
               <img src="assets/images/icon-arcade.svg" alt="" />
-              <span class="plan-copy"><strong>Arcade</strong><small class="plan-price">$9/mo</small><small class="yearly-benefit">2 months free</small></span>
+              <span class="plan-copy">
+                <strong>Arcade</strong>
+                <small class="plan-price">$9/mo</small>
+                <small class="yearly-benefit">2 months free</small>
+              </span>
             </button>
-            <button type="button" class="plan-card" data-plan="Advance" aria-pressed="false">
+
+            <button type="button" class="plan-card plan_card"
+              data-plan="Advance" aria-pressed="false">
               <img src="assets/images/icon-advanced.svg" alt="" />
-              <span class="plan-copy"><strong>Advance</strong><small class="plan-price">$12/mo</small><small class="yearly-benefit">2 months free</small></span>
+              <span class="plan-copy">
+                <strong>Advance</strong>
+                <small class="plan-price">$12/mo</small>
+                <small class="yearly-benefit">2 months free</small>
+              </span>
             </button>
-            <button type="button" class="plan-card" data-plan="Pro" aria-pressed="false">
+
+            <button type="button" class="plan-card plan_card"
+              data-plan="Pro" aria-pressed="false">
               <img src="assets/images/icon-pro.svg" alt="" />
-              <span class="plan-copy"><strong>Pro</strong><small class="plan-price">$15/mo</small><small class="yearly-benefit">2 months free</small></span>
+              <span class="plan-copy">
+                <strong>Pro</strong>
+                <small class="plan-price">$15/mo</small>
+                <small class="yearly-benefit">2 months free</small>
+              </span>
             </button>
           </div>
-          <p class="step-error" id="plan-error" role="alert">Please select a plan</p>
+
+          <p class="step-error" id="plan-error" role="alert">
+            Please select a plan
+          </p>
+
           <div class="billing-switch">
             <span id="monthly-label" class="billing-label selected">Monthly</span>
-            <button type="button" id="billing-toggle" class="toggle" role="switch" aria-checked="false" aria-label="Toggle yearly billing"><span></span></button>
+            <button type="button" id="billing-toggle" class="toggle"
+              role="switch" aria-checked="false"
+              aria-label="Toggle yearly billing">
+              <span></span>
+            </button>
             <span id="yearly-label" class="billing-label">Yearly</span>
           </div>
         </section>
 
+        <!-- Step 3: Add-ons -->
         <section class="form-step" data-step="3">
           <header class="step-header">
             <h1>Pick add-ons</h1>
             <p>Add-ons help enhance your gaming experience.</p>
           </header>
+
           <div class="addon-list">
-            <label class="addon-card">
-              <input type="checkbox" class="addon-checkbox" value="Online Services" data-monthly="1" data-yearly="10" />
+            <label class="addon-card addon_card">
+              <input type="checkbox" class="addon-checkbox"
+                value="Online Services" data-monthly="1" data-yearly="10" />
               <span class="custom-checkbox" aria-hidden="true"></span>
-              <span class="addon-copy"><strong>Online Services</strong><small>Access to multiplayer games</small></span>
+              <span class="addon-copy">
+                <strong>Online Services</strong>
+                <small>Access to multiplayer games</small>
+              </span>
               <span class="addon-price">+$1/mo</span>
             </label>
-            <label class="addon-card">
-              <input type="checkbox" class="addon-checkbox" value="Larger Storage" data-monthly="2" data-yearly="20" />
+
+            <label class="addon-card addon_card">
+              <input type="checkbox" class="addon-checkbox"
+                value="Larger Storage" data-monthly="2" data-yearly="20" />
               <span class="custom-checkbox" aria-hidden="true"></span>
-              <span class="addon-copy"><strong>Larger Storage</strong><small>Extra 1TB of cloud save</small></span>
+              <span class="addon-copy">
+                <strong>Larger Storage</strong>
+                <small>Extra 1TB of cloud save</small>
+              </span>
               <span class="addon-price">+$2/mo</span>
             </label>
-            <label class="addon-card">
-              <input type="checkbox" class="addon-checkbox" value="Customizable Profile" data-monthly="2" data-yearly="20" />
+
+            <label class="addon-card addon_card">
+              <input type="checkbox" class="addon-checkbox"
+                value="Customizable Profile" data-monthly="2" data-yearly="20" />
               <span class="custom-checkbox" aria-hidden="true"></span>
-              <span class="addon-copy"><strong>Customizable Profile</strong><small>Custom theme on your profile</small></span>
+              <span class="addon-copy">
+                <strong>Customizable Profile</strong>
+                <small>Custom theme on your profile</small>
+              </span>
               <span class="addon-price">+$2/mo</span>
             </label>
           </div>
         </section>
 
+        <!-- Step 4: Summary -->
         <section class="form-step" data-step="4">
           <header class="step-header">
             <h1>Finishing up</h1>
             <p>Double-check everything looks OK before confirming.</p>
           </header>
+
           <div class="summary-box">
             <div class="summary-plan">
-              <div><strong id="summary-plan-name">Select a plan</strong><button type="button" id="change-plan" class="text-button">Change</button></div>
+              <div>
+                <strong id="summary-plan-name">Select a plan</strong>
+                <button type="button" id="change-plan" class="text-button">
+                  Change
+                </button>
+              </div>
               <strong id="summary-plan-price">$0/mo</strong>
             </div>
             <div id="summary-addons" class="summary-addons"></div>
           </div>
-          <div class="total-row"><span id="total-label">Total (per month)</span><strong id="summary-total">$0/mo</strong></div>
+
+          <div class="total-row">
+            <span id="total-label">Total (per month)</span>
+            <strong id="summary-total">$0/mo</strong>
+          </div>
         </section>
 
+        <!-- Final Confirmation -->
         <section class="form-step thank-you-step" data-step="5">
           <div class="thank-you-content">
-            <img src="assets/images/icon-thank-you.svg" alt="" class="thank-you-icon" />
+            <img src="assets/images/icon-thank-you.svg"
+              alt="" class="thank-you-icon" />
             <h1>Thank You!</h1>
-            <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+            <p>
+              Thanks for confirming your subscription! We hope you have
+              fun using our platform. If you ever need support, please
+              feel free to email us at support@loremgaming.com.
+            </p>
           </div>
         </section>
 
         <footer class="form-footer">
-          <button type="button" id="back-button" class="back-button" hidden>Go Back</button>
+          <button type="button" id="back-button" class="back-button" hidden>
+            Go Back
+          </button>
           <span class="footer-spacer"></span>
-          <button type="button" id="next-button" class="primary-button">Next step</button>
+          <button type="button" id="next-button" class="primary-button">
+            Next step
+          </button>
         </footer>
       </form>
     </section>
   </main>
-  <p class="attribution">Challenge by <a href="https://www.crio.do/" target="_blank" rel="noreferrer">Crio.do</a>. Coded by <a href="#">You</a>.</p>
+
+  <p class="attribution">
+    Challenge by
+    <a href="https://www.crio.do/" target="_blank" rel="noreferrer">Crio.do</a>.
+    Coded by <a href="#">You</a>.
+  </p>
+
   <script src="script.js"></script>
 </body>
 </html>
